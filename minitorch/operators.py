@@ -3,7 +3,7 @@
 import math
 
 # ## Task 0.1
-from typing import Callable, Iterable
+from typing import Callable, Iterable, Optional
 
 #
 # Implementation of a prelude of elementary functions.
@@ -148,10 +148,10 @@ def zipWith(
 
 
 def reduce(
-    fn: Callable[[float, float], float], default: float = None
+    fn: Callable[[float, float], float], default: Optional[float] = None
 ) -> Callable[[Iterable[float]], float]:
     """Higher-order function that reduces an iterable to a single value starting with the first element.
-    
+
     Args:
     ----
         fn: Function to apply for reduction
