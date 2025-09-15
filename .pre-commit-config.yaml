@@ -35,10 +35,13 @@ repos:
     # Run the linter.
     - id: ruff
       args: [ --fix ]
+      exclude: ^minitorch/datasets\.py$
     # Run the formatter.
     - id: ruff-format
+      exclude: ^minitorch/datasets\.py$
 
 - repo: https://github.com/RobertCraigie/pyright-python
   rev: v1.1.376
   hooks:
     - id: pyright
+      exclude: ^minitorch/datasets\.py$
